@@ -1,0 +1,149 @@
+/* Styles pour la boîte modale */
+.boite-modale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(248, 248, 248,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.boite-modale.visible {
+  opacity: 1;
+}
+
+.boite-modale.invisible {
+  display: none;
+}
+/* Style pour le contenu de la modale */
+.modale-contenu {
+  display: flex;
+  background-color: #f5f5f5;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* Style du bouton de fermeture */
+.fermer-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: black;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Styles pour la partie gauche de la modale */
+.modale-gauche {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: white;
+}
+
+.promo-image {
+  max-width: 100%;
+  object-fit: cover;
+  max-height: 60%;
+}
+
+.info-contact {
+  padding: 20px;
+}
+
+.info-contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.info-contact .phone {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* Styles pour la partie droite de la modale */
+.modale-droite {
+  padding: 40px 30px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modale-droite h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.form-abonnement {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.email-input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.abonner-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+}
+
+.abonner-btn:hover {
+  background-color: #333;
+}
+/* Séparateur */
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+/* Lien pour continuer dans la modale */
+.continuer-link {
+  align-self: center;
+  color: #555;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.continuer-link:hover {
+  color: #000;
+}
+
+.description{ 
+  font-size: 14px;
+}

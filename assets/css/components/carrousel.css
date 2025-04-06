@@ -1,0 +1,78 @@
+/* Style général du carrousel */
+.carrousel {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* Conteneur des images */
+.carrousel__liste {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* Style des images */
+.carrousel__image-conteneur {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+}
+
+.carrousel__image-conteneur img{
+    min-width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position:bottom;
+}
+
+.carrousel__image-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carrousel__image-inactive {
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Boutons de navigation */
+.carrousel__conteneur {
+    position: relative;
+}
+
+.carrousel__controles {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.carrousel__precedent,
+.carrousel__suivant {
+    pointer-events: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    color: var(--couleur-texte);
+    font-size: 24px;
+    background-color: var( --couleur-bg);
+    border:1px solid var(--couleur-texte);
+}
+.carrousel__precedent:hover,
+.carrousel__suivant:hover {
+    transform: scale(1.1);
+}

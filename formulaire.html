@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Commande de Produits de Randonnée et Camping - RandoAventure</title>
+    <link rel="stylesheet" href="assets/css/main.css" >
+    <script src="assets/js/pages/formulaire.js" type="module"></script>
+    <body>
+        <header class="headerDiv">
+              <div class="headerElement">
+                <div class="container row">
+                  <div class="logo"><a href="index.html">RandoAventure</a></div>
+                  <!-- Navigation générée par js -->
+                  <nav id="nav"></nav>
+                </div>
+              </div>
+           
+          </header>
+
+        <main>
+
+            <form action="#" method="get">
+                <header>
+                    <h1 class="textCenter">Formulaire d'achat</h1>
+
+                    <div class="progress-bar__container">
+                        <div class="progress-bar">
+                            <div class="progress-bar__fill"></div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- SECTION 1 : Informations personnelles< -->
+                <section data-page="1" class="section-form infos-client">
+                    <h2>Informations personnelles</h2>
+                   
+                    <div class="section-box">
+                        
+                        <div class="input-group">
+                            <label for="nom_complet">Nom complet <span>*</span></label>
+                            <input type="text" id="nom_complet" name="nom_complet" maxlength="25" placeholder="Veuillez saisir votre nom complet"  data-validation="texte" 
+                            data-error-message="Le nom ne doit pas contenir de chiffres"  required>
+                            <p class="message-erreur">Veuillez corriger le champ</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="telephone">Numéro de téléphone <span>*</span></label>
+                            <input type="tel" id="telephone" name="telephone" pattern="\(?\d{3}\)?\s?-?\d{3}-?\d{4}" placeholder="Ex: (555) 555-5555" required>
+                            <p class="message-erreur">Le numéro de téléphone doit être au format (555) 555-5555.</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="courriel">Courriel <span>*</span></label>
+                            <input type="email" id="courriel" name="courriel"  placeholder="Veuillez saisir votre courriel" required >
+                            <p class="message-erreur">L'adresse courriel doit être au format (Ex: exemple@domaine.com).</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="ville">Ville <span>*</span></label>
+                            <input type="text" id="ville" name="ville" maxlength="25" placeholder="Veuillez saisir votre ville" data-validation="texte" 
+                            data-error-message="La ville ne doit pas contenir de chiffres" required >
+                            <p class="message-erreur">Veuillez corriger le champ</p>
+                        </div>
+                        <span>* Champs obligatoires</span>
+                    </div>
+                </section>
+
+                <!-- SECTION 2 : Détails de livraison -->
+                <section data-page="2" class="section-form details-livraison invisible">
+                    <h2>Détails de livraison</h2>
+                    <div class="section-box">
+                        <div class="input-group">
+                            <label for="adresse">Adresse <span>*</span></label>
+                            <input type="text" id="adresse" name="adresse" maxlength="35" required >
+                            <p class="message-erreur">Veuillez corriger le champ</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="code_postal">Code postal <span>*</span></label>
+                            <input type="text" id="code_postal" name="code_postal" pattern="^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$" required>
+                            <p class="message-erreur">Le code postal doit être au format suivante (Ex: H2X 1Y4).</p>
+                        </div>
+                        <!-- Date de livraison souhaitée -->
+                        <div class="input-group">
+                        <label for="date_livraison">Date de livraison souhaitée <span>*</span></label>
+                        <input type="date" id="date_livraison" name="date_livraison" required>
+                        </div>
+
+
+                        <div class="input-group">
+                            <div class="label">Livraison en magasin</div>
+                            <!-- Cases à cocher -->
+                            <label><input type="checkbox" name="livraison_magasin"></label>
+                                <select id="magasin" name="magasin" disabled>
+                                    <option value="Magasin Centre-Ville" selected>Magasin Centre-Ville</option>
+                                    <option value="Magasin Nord">Magasin Nord</option>
+                                    <option value="Magasin Sud">Magasin Sud</option>
+                                    <option value="Magasin Est">Magasin Est</option>
+                                    <option value="Magasin Ouest">Magasin Ouest</option>
+                                </select>
+
+                        </div>
+
+                        <div class="input-group">
+                            <div class="label">Service de livraison</div>
+                            <div class="box_radio">
+                                <div>
+                                    <input type="radio" id="poste_canada" name="service_livraison" value="Poste canada" checked >
+                                    <label for="poste_canada" class="custom-radio">Poste Canada
+                                    </label>
+                                </div>
+                                <div>
+                                    <input
+                                    type="radio"
+                                    id="Fed_Ex"
+                                    name="service_livraison"
+                                    value="FedEx"
+                                    ><label for="Fed_Ex" class="custom-radio">FedEx</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="ups" name="service_livraison" value="UPS" >
+                                    <label for="ups" class="custom-radio">UPS</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                      
+                        
+                </section>
+
+
+
+                <section data-page="3" class="section-form resume invisible">
+                    <h2>Résumé de la commande</h2>
+                    <div class="section-box">
+                    <div class="resume__client">
+                        <h3>Informations personnelles</h3>
+                        <p><strong>Nom complet:</strong>&nbsp;<span data-champ="nom_complet"></span></p>
+                        <p><strong>Numero de téléphone:</strong>&nbsp;<span data-champ="telephone"></span></p>
+                        <p><strong>Courriel:</strong>&nbsp;<span data-champ="courriel"></span></p>
+                        <p><strong>Ville:</strong>&nbsp;<span data-champ="ville"></span></p>
+                    </div>
+                    <div class="resume__produit">
+                        <h3>Détails de livraison</h3>
+                        <p><strong>Adresse: </strong>&nbsp;<span data-champ="adresse"></span></p>
+                        <p><strong>Code Postal: </strong>&nbsp;<span data-champ="code_postal"></span></p>
+                        <p><strong>Date de livraison souhaitée:</strong>&nbsp;<span data-champ="date_livraison"></span></p>
+                        <p><strong>Livraison en magasin:</strong>&nbsp;<span data-champ="livraison_magasin"></span></p>
+                        <p><strong>Service de livraison:</strong>&nbsp;<span data-champ="service_livraison"></span></p>
+                    </div>
+                    </div>
+                </section>
+                
+
+                <!-- Bouton de validation -->
+                <div class="form_bouton">
+                    <div class="bouton" data-direction="-1">Étape Précédent</div>
+                    <div class="bouton inactif" data-direction="1">Étape Suivante</div>
+                    <input class="bouton invisible" type="submit" value="Confirmer la commande" >
+                </div>
+            </form>
+        </main>
+
+    <footer class="pied-page">© 2025 RandoAventure. Tous droits réservés.</footer>
+ 
+    </body>
+</html>

@@ -1,0 +1,38 @@
+/*menu*/
+nav {
+    display: flex;
+    gap: 25px;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: end;
+    font-size: 18px;
+  }
+  
+  nav a{ 
+    position: relative;
+  }
+
+  nav a.active {
+    font-weight: bold;
+    color: var(--couleur-accent);
+  }
+  /* Survol effet */
+  nav a:before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--couleur-accent);
+    transition: all 0.4s ease;
+    width: 100%;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  nav a:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }

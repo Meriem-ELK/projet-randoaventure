@@ -1,0 +1,23 @@
+:root {
+--couleur-bg: #f8f8f8;
+--couleur-texte: black;
+--police-principale: "Open Sans", serif;
+--couleur-secondaire : #2c6b4f;
+--couleur-accent :#fecd75;
+
+/* Espacement */
+--marge-petit : 10px;
+--marge-moyenne: 20px;
+--marge-grand: 40px
+}
+
+[data-theme="jour"] {
+    --couleur-bg: #f8f8f8;
+    --couleur-texte: black;
+    --couleur-secondaire : #2c6b4f;
+}
+[data-theme="nuit"] {
+    --couleur-bg:#1a1a1a;
+    --couleur-texte: white;
+    --couleur-secondaire : rgba(50, 50, 50, 0.9);;
+}

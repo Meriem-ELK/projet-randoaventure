@@ -1,0 +1,23 @@
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+  
+  .progress-bar__fill {
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--couleur-accent);
+  
+    transition: width 0.5s;
+  }
+
+/* Progress Bar */
+.progress-bar__container {
+    display: flex;
+    max-width: 600px;
+    padding-bottom: 2rem;
+  }
+  

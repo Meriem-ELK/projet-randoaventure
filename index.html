@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Accueil - RandoAventure</title>
+    <link rel="stylesheet" href="assets/css/main.css" >
+    <script src="assets/js/pages/accueil.js" type="module"></script>
+  </head>
+  <body>
+    <header class="headerDiv">
+      <div class="homeSlide">
+        <div class="headerElement">
+          <div class="container row">
+            <div class="logo"><a href="index.html">RandoAventure</a></div>
+            <!-- Navigation générée par js -->
+            <nav class="nav"></nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="textCenter">Vivez l'aventure, respirez la liberté</h1>
+      <div class="container row">
+        <section id="listProduit" class="colSection">
+          <h2>Équipements de randonnée</h2>
+          <div id="optionsTri" class="row">
+            <div id="triNomAsc" class="btnTriage">Trier par nom (A-Z)</div>
+            <div id="triNomDesc" class="btnTriage">Trier par nom (Z-A)</div>
+            <div id="triPrixAsc" class="btnTriage">
+              Trier par prix (croissant)
+            </div>
+          </div>
+          <div id="produitList" class="produitList row"></div>
+        </section>
+     
+        <aside id="detailProduit" class="colAside">
+          <h2>SAC À DOS DE RANDONNÉE </h2>
+          <div class="divImgDetail">
+          <img src="assets/img/produits/sac-a-dos.jpg" alt="Sac à dos de randonnée ">
+          </div>
+          <p class="prix">89.99 $</p>
+          <p>Sac à dos léger et résistant pour une randonnée confortable.</p>
+      </aside>
+      </div>
+    </main>
+
+    <footer class="pied-page">© 2025 RandoAventure. Tous droits réservés.</footer>
+  </body>
+</html>

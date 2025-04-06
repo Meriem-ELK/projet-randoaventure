@@ -1,0 +1,16 @@
+[data-mode] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    & svg {
+        min-height: 30px;
+        max-height: 100%;
+        cursor: pointer;
+    }
+
+    & path {
+        fill: var(--couleur-texte);
+    }
+}
